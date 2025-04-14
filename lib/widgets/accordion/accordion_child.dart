@@ -4,8 +4,6 @@ import 'package:lukyui/lukyui_components.dart';
 import 'package:lukyui/utils/utils.dart';
 import 'package:simple_animations/simple_animations.dart';
 
-import 'model.dart';
-
 class AccordionChild extends StatefulWidget {
   final LukyAccordionItemModel item;
   final Widget Function(

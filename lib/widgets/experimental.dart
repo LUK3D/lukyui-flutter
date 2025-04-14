@@ -355,14 +355,14 @@ class LinePainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant LinePainter old) =>
-      old.getLinePoints() != getLinePoints() ||
-      old.smoothness != smoothness ||
-      old.isDashed != isDashed ||
-      old.dashLength != dashLength ||
-      old.dashGap != dashGap ||
-      old.dashRadius != dashRadius ||
-      old.strokeWidth != strokeWidth ||
-      old.color != color ||
-      old.gradient != gradient;
+  bool shouldRepaint(covariant LinePainter oldDelegate) =>
+      oldDelegate.getLinePoints() != getLinePoints() ||
+      oldDelegate.smoothness != smoothness ||
+      oldDelegate.isDashed != isDashed ||
+      oldDelegate.dashLength != dashLength ||
+      oldDelegate.dashGap != dashGap ||
+      oldDelegate.dashRadius != dashRadius ||
+      oldDelegate.strokeWidth != strokeWidth ||
+      oldDelegate.color != color ||
+      oldDelegate.gradient != gradient;
 }

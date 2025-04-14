@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lukyui/lukyui_components.dart';
-import 'package:lukyui/utils/theme/utils.dart';
 
 /// The place where the widget is placed in the parent widget.
 enum LukyPlacement {

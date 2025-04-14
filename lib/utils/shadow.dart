@@ -71,7 +71,7 @@ class LukyShadow {
     ),
   ];
 
-  static final List<BoxShadow> _2xl = [
+  static final List<BoxShadow> xxl = [
     BoxShadow(
       color: Colors.black.withValues(alpha: 0.25),
       offset: Offset(0, 25),
@@ -105,7 +105,7 @@ class LukyShadow {
       case 'xl':
         return xl;
       case '2xl':
-        return _2xl;
+        return xxl;
       case 'inner':
         return inner;
       case 'none':
