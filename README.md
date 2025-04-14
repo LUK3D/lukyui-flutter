@@ -1,106 +1,126 @@
+
 ![Luky UI splashscreen](assets/splashscreen.png)
 
 # Luky UI
 
-A UI library that implements the most unique, customizable and feature reach components for flutter.
+**Luky UI** is a modern Flutter UI library offering highly customizable, feature-rich, and uniquely designed components.
 
-The goal of this ui kit is to be the shadcn ui of flutter with beautifull, fast and modern components that every app needs.
+Inspired by shadcn ui, our goal is to bring a similar level of elegance, performance, and practicality to the Flutter ecosystem with fast, beautiful, and essential components for every app.
 
-## Features
 
-The current implementation contains the following features:
-### Components:
-- Buttons
-- Autocomplete / dropdown
-- User avatar with 3 ring levels
-- Calendar
-- Bezier Curve editor
-- 2D grid (fully custimizable and support zoom in and out)
-- Checker Background
-- Input
-- Alerts
-- Accordion
-- Checkbox
-- Card
-- Badge
-- Ship
-- Flow Diagram editor
+## ✨ Features
 
-### State management
-Luky UI uses flutter streams and statefull widgets to manage states.
-You have access to the `LukyEventSystem` to create event/streams and use them to listen to specifc events and emit custom events.
+### 🧩 Components
+- Buttons  
+- Autocomplete / Dropdown  
+- User Avatar with 3 Ring Levels  
+- Calendar  
+- Bézier Curve Editor  
+- Customizable 2D Grid with Zoom Support  
+- Checker Background  
+- Input Fields  
+- Alerts  
+- Accordion  
+- Checkbox  
+- Card  
+- Badge  
+- Ship (custom component)  
+- Flow Diagram Editor  
 
-### Custom Themes
-With Luky UI, you can change between multiple themes instead of just dark and light modes.
+### ⚡ State Management
+Luky UI uses Flutter streams and `StatefulWidget`s for internal state handling.  
+It includes a `LukyEventSystem` to help you create custom streams and listen or emit specific events within your app.
 
-## Utility
-Luky UI exposes some utility functions to help you supercharge your app.
-Some of them are:
-- Predefined sizes following the tailwind css convention
-- Predefined Shadow values following the tailwind css implementation
-- `LukyCenterSnapListView` A list view that snaps to the most centered child (used in the calendar component)
-- `LukyCenteredDetector` A component that checks if it's on the midle of its parent (used in the calendar component)
-- Scroll propagation prevention
+### 🎨 Theming
+Luky UI supports multiple theme definitions—not just light and dark. Easily switch between any number of themes and customize them to your needs.
 
-The a lot more features that you can discover by reading the docs.
+---
 
-## Getting started
-1 - Install the package
+## 🛠️ Utilities
 
-`flutter pub get luky`
+Luky UI also provides utility classes and widgets to simplify common UI behaviors:
 
-2 - Wrap the part of the app that you want to use Luky UI with Luky().
-Optionally, you can provide an initial theme.
+- **Predefined sizes** following the Tailwind CSS scale  
+- **Predefined shadows** inspired by Tailwind's shadow system  
+- `LukyCenterSnapListView` – A `ListView` that snaps to the closest centered item (used in the calendar)  
+- `LukyCenteredDetector` – A widget that detects when it’s centered within its parent (also used in the calendar)  
+- **Scroll propagation prevention** utility  
+
+...and many more features you can explore in the documentation.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install the Package
+
+```bash
+flutter pub add luky
+```
+
+### 2. Wrap Your App (or a Section of It) with `Luky`
+
+You can optionally pass an initial theme:
 
 ```dart
 Luky(
-    initialTheme: lightTheme,
-    child: MaterialApp(
+  initialTheme: lightTheme,
+  child: MaterialApp(
     home: YourAppPage(),
-    ),
+  ),
 )
 ```
 
-## Creating a theme
-You can create a new theme by instatiating `LukyThemeData` class and providing your custom colors, or leave blank to use the default one.
+---
+
+## 🎨 Creating a Custom Theme
+
+You can create a theme by instantiating `LukyThemeData` and optionally customizing the color scheme:
 
 ```dart
 import 'package:flutter/material.dart';
 import 'package:lukyui/lukyui_components.dart';
 
 final lightTheme = LukyThemeData();
+
 final darkTheme = LukyThemeData(
   colorScheme: LukyColorScheme(
-    background: const Color(0xFF121212),
-    surface: const Color(0xFF1E1E1E),
-    onPrimary: const Color(0xFF2A2A2A),
-    onBackground: const Color.fromARGB(255, 119, 119, 119),
-    onSurface: const Color.fromARGB(255, 160, 160, 160),
-    dividerColor: const Color(0xFF2B2B2B),
-    defaultBackground: const Color(0xFF1E1E1E),
-    defaultForeground: const Color(0xFF9ca3af),
+    background: Color(0xFF121212),
+    surface: Color(0xFF1E1E1E),
+    onPrimary: Color(0xFF2A2A2A),
+    onBackground: Color.fromARGB(255, 119, 119, 119),
+    onSurface: Color.fromARGB(255, 160, 160, 160),
+    dividerColor: Color(0xFF2B2B2B),
+    defaultBackground: Color(0xFF1E1E1E),
+    defaultForeground: Color(0xFF9ca3af),
   ),
 );
 ```
 
-## Using the theme values
-You can get the current instance of the theme by gettingt it from the context;
+---
 
-Example:
+## 🎯 Accessing Theme Values
+
+You can retrieve the current theme instance from context like this:
+
 ```dart
 final theme = Luky.of(context).theme;
 
 Text(
-    "Simple theme test",
-    style: TextStyle(
-        fontSize: theme.fontSize.text3Xl,
-        fontWeight: FontWeight.bold,
-        color: theme.colorScheme.onSurface,
-    ),
-),
+  "Simple theme example",
+  style: TextStyle(
+    fontSize: theme.fontSize.text3Xl,
+    fontWeight: FontWeight.bold,
+    color: theme.colorScheme.onSurface,
+  ),
+);
 ```
 
-## Aditional Notes
->This project is under development. Some additional component will be added and the current ones will be updated.
-> 
->The documentation will be available soon...
+---
+
+## 📌 Additional Notes
+
+> ⚠️ This project is still under active development.  
+> Expect new components, updates, and enhancements in upcoming releases.  
+>  
+> 📚 Full documentation will be available soon!
