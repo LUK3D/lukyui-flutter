@@ -24,3 +24,4 @@ export 'core/event_system/event_system.dart';
 export 'core/event_system/events.dart';
 export 'widgets/checker_grid.dart';
 export 'utils/theme/utils.dart';
+export 'widgets/dotted_grid.dart';
